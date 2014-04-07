@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Login</title>
+    <script src="prollyfill.js"></script>
+  </head>
+  <body>
+    <button id="login">login</button>
+    <div id="msg"></div>
+    <script>
+      document.getElementById('login').addEventListener('click', loginClick)
+      function loginClick() {
+        navigator.login().then(function (token) {
+          document.getElementById('msg').textContent = 'Authenticated with token ' + token
+        })
+        .catch(function (err) {
+          document.getElementById('msg').textContent = err
+        })
+      }
+
+    </script>
+  </body>
+</html>

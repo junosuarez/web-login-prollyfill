@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Web Login</title>
+    <title>WebLogin Demo</title>
     <script src="prollyfill.js"></script>
   </head>
   <body>
+    <h1>Demo of WebLogin</h1>
     <button id="login">login</button>
     <div id="msg"></div>
+    <p>The code for this demo lives at <a href="">github.com/jden/web-login-prollyfill</a></p>
+    <p>The draft specification for WebLogin is being developed at <a href="https://github.com/jden/web-login">github.com/jden/web-login</a></p>
+    <p>View the source of this page to see how it is requesting a unique identity token from the browser. Eventually, conforming User Agents will be able to provide this functionality natively.</p>
     <script>
       document.getElementById('login').addEventListener('click', loginClick)
       function loginClick() {
